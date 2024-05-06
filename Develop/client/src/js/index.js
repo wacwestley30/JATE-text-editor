@@ -1,6 +1,7 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
+import { header } from './header';
 import '../css/style.css';
 
 const main = document.querySelector('#main');
@@ -31,3 +32,6 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+// Set the editor value to include the header text
+editor.editor.setValue(header + '\n\n' + editor.editor.getValue());
