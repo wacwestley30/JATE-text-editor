@@ -1,20 +1,22 @@
 {
-  "name": "JATE",
+  "name": "jate",
   "version": "1.0.0",
   "description": "Just another text editor with offline support",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "build": "webpack --mode=production",
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
-    "client": "webpack --watch --mode=development"
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.37.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4"
   },
