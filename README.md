@@ -54,7 +54,7 @@ When attempting to access a specific JavaScript file linked within the HTML, it 
 
 - Open the application.
 - Observe the error triggered in the editor interface.
-- Make edits to the editor while watching the devTools (IndexedDb and logs).
+- Make edits to the editor while watching the devTools (IndexedDb and console.logs).
 - Refresh or reload the application.
 - Notice the editor defaulting back to its initial layout instead of retaining saved data.
 
