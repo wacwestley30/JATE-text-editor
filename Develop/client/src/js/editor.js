@@ -41,3 +41,10 @@ export default class {
     });
   }
 }
+
+// No matter what I do this link is breaking my code in the html
+{/* <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+</script> */}
+// I have rebuilt editor.js and database.js multiple times from the starter code provided.
+// This link loads with errors and it does not allow my editor to persist even when the code is being saved to the indexedDB correctly

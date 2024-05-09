@@ -28,21 +28,23 @@ module.exports = () => {
         icon: './icon_96x96.png'
       }),
       new WebpackPwaManifest({
+        filename: 'manifest.json',
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Text Editor Web Application with Offline Support',
         background_color: '#225ca3',
         theme_color: '#225ca3',
+        start_url: '/',
+        fingerprints: false,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512]
-          },
-          {
-            src: path.resolve('favicon.ico'),
-            sizes: [64, 128, 192, 256]
+            sizes: [96, 144],
+            type: 'image/png',
+            purpose: 'any'
           }
-        ]
+        ],
+        prefer_related_applications: false
       }),
       new InjectManifest({
         swSrc: './src-sw.js'
