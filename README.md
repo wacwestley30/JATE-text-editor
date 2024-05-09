@@ -6,6 +6,11 @@
 
 This is J.A.T.E a text editor web app that allows users to create notes or code snippets with or without an internet connection. It features a client-server folder structure, utilizes webpack for bundling JavaScript files, and employs IndexedDB for immediate database storage. Content entered in the text editor is automatically saved and retrieved from IndexedDB, ensuring reliability. Additionally, the application can be installed as a Progressive Web Application with a generated manifest.json.
 
+Deployed on Render:
+https://jate-text-editor-tmyc.onrender.com/
+
+![Screenshot of running PWA](/Develop/screenshot/JATE.png)
+
 ## Table of Contents
 
 - [Installation](#installation)
